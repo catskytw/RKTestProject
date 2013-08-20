@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CustomLogo" representedClassName="CustomLogo" syncable="YES">
+        <attribute name="customFrontLogo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customLoginLogo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PasswdConstraints" representedClassName="PasswdConstraints" syncable="YES">
+        <attribute name="passwdConstraint01" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="passwdConstraint02" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="passwdConstraint03" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="passwdConstraint04" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="QNFirmware" representedClassName="QNFirmware" syncable="YES">
+        <attribute name="build" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="buildTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="QNLogin" representedClassName="QNLogin" syncable="YES">
+        <attribute name="authPassed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="authSid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="demoSiteSupport" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="doQuick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dsv2Supported" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="dsv2URL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dsv3Supported" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="dWebEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="forceSSL" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hdaroot_ALMOST_FULL" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hdaRoot_ALMOST_FULL" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hostname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="httpHost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_booting" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="msv2Supported" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="msv2URL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msv2WebEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nvrEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nvrURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nvrVer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qDownloadEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="qMultimediaEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="qMusicsEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="qMusicsURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qPhotosEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="qPhotosURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qVideosEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="qVideosURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qWebEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="qWebPort" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="qWebSSLEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="qWebSSLPort" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="serviceURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="specVersion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stunnelEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="stunnelPort" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="webAccessPort" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="webFSEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="wfm2" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="wfmPort" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="wfmPortEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="wfmSSLEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="wfmSSLPort" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="wfmURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship_customLogo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PasswdConstraints" syncable="YES"/>
+        <relationship name="relationship_passwdConstraints" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PasswdConstraints" syncable="YES"/>
+        <relationship name="relationship_QNFirmware" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="QNFirmware" syncable="YES"/>
+        <relationship name="relationship_QNModel" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="QNModel" syncable="YES"/>
+    </entity>
+    <entity name="QNModel" representedClassName="QNModel" syncable="YES">
+        <attribute name="customModelName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayModelName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="internalModelName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modelName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storage_v2" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="QNMyCloudVLink" representedClassName="QNMyCloudVLink" syncable="YES">
+        <attribute name="actTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nasName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="QNFirmware" positionX="-12348" positionY="-2457" width="128" height="88"/>
+        <element name="QNLogin" positionX="-12195" positionY="-2790" width="128" height="793"/>
+        <element name="QNModel" positionX="-12512" positionY="-2259" width="128" height="135"/>
+        <element name="QNMyCloudVLink" positionX="-3744" positionY="-1773" width="128" height="75"/>
+        <element name="PasswdConstraints" positionX="-3726" positionY="-1656" width="128" height="103"/>
+        <element name="CustomLogo" positionX="-4646" positionY="-2307" width="128" height="73"/>
+    </elements>
+</model>
