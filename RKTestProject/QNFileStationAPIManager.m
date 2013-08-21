@@ -16,7 +16,7 @@
 #import "QNFileStationCoreDataMappingModule.h"
 
 #define USING_CORE_DATA YES
-int ddLogLevel = LOG_LEVEL_VERBOSE;
+int ddLogLevel = LOG_LEVEL_ERROR;
 @implementation QNFileStationAPIManager
 
 #pragma mark - Initiail Section

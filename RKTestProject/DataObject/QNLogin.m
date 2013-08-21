@@ -21,10 +21,8 @@
 @dynamic dsv2Supported;
 @dynamic dsv2URL;
 @dynamic dsv3Supported;
-@dynamic dWebEnabled;
 @dynamic forceSSL;
 @dynamic groupname;
-@dynamic hdaroot_ALMOST_FULL;
 @dynamic hdaRoot_ALMOST_FULL;
 @dynamic hostname;
 @dynamic httpHost;

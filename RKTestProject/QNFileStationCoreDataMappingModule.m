@@ -23,29 +23,44 @@ static QNFileStationCoreDataMappingModule *staticFileStationCoreDataMappingModul
     //login mapping
     RKEntityMapping *responseMapping = [RKEntityMapping mappingForEntityForName:@"QNLogin" inManagedObjectStore:managedObjectStore];
     
-    responseMapping.identificationAttributes = @[@"authSid"];
-    
-    NSManagedObjectModel *managerObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-    
+    responseMapping.identificationAttributes = @[@"authSid"];    
     [responseMapping addAttributeMappingsFromDictionary:[self allMappingInAuthLogin]];
 
-    //firmware mapping
-    RKEntityMapping *firmwareMapping = [RKEntityMapping mappingForEntityForName:@"QNFirmware" inManagedObjectStore:managedObjectStore];
-    NSEntityDescription *firmwareDescription = [[managerObjectModel entitiesByName] objectForKey:@"QNFirmware"];
-    NSArray *firmwareKeys =[[[RKPropertyInspector sharedInspector] propertyInspectionForEntity:firmwareDescription] allKeys];
-    [firmwareMapping addAttributeMappingsFromDictionary:[self convertAllKeysFromRKPropertInspectorToDictionary:firmwareKeys]];
-    
+    //加入firmwareRelation
     RKRelationshipMapping *firmwareRelation = [RKRelationshipMapping relationshipMappingFromKeyPath:@"firmware"
                                                                                           toKeyPath:@"relationship_QNFirmware"
-                                                                                        withMapping:firmwareMapping];
+
+                                                                                        withMapping:[self entityMapping:@"QNFirmware" withManagerObjectStore:managedObjectStore]];
     [responseMapping addPropertyMapping:firmwareRelation];
+    
+    //加入moduleRelation
+    RKRelationshipMapping *modelRelation = [RKRelationshipMapping relationshipMappingFromKeyPath:@"model"
+                                                                                          toKeyPath:@"relationship_QNModel"
+                                               
+                                                                                        withMapping:[self entityMapping:@"QNModel" withManagerObjectStore:managedObjectStore]];
+    [responseMapping addPropertyMapping:modelRelation];
+    
+    //加入cutomLogo
+    RKRelationshipMapping *customLogoRelation = [RKRelationshipMapping relationshipMappingFromKeyPath:@"customLogo"
+                                                                                       toKeyPath:@"relationship_customLogo"
+                                            
+                                                                                     withMapping:[self entityMapping:@"CustomLogo" withManagerObjectStore:managedObjectStore]];
+    [responseMapping addPropertyMapping:customLogoRelation];
+    
+    //加入passwdConstraints
+    RKRelationshipMapping *passwdContraintsRelation = [RKRelationshipMapping relationshipMappingFromKeyPath:@"passwdConstraints"
+                                                                                            toKeyPath:@"relationship_passwdConstraints"
+                                                 
+                                                                                          withMapping:[self entityMapping:@"PasswdConstraints" withManagerObjectStore:managedObjectStore]];
+    [responseMapping addPropertyMapping:passwdContraintsRelation];
+
     
     return responseMapping;
 }
 
-#pragma mark - Private methods
+#pragma mark - Mapping Section
+
 -(NSDictionary *)allMappingInAuthLogin{
-//    return @{@"authSid.text":@"authSid", @"HTTPHost.text":@"httpHost"};
     return @{
              @"doQuick.text": @"doQuick",
              @"is_booting.text":@"is_booting",
@@ -79,7 +94,7 @@ static QNFileStationCoreDataMappingModule *staticFileStationCoreDataMappingModul
              @"wfmPortEnabled.text":@"wfmPortEnabled",
              @"wfmPort.text":@"wfmPort",
              @"wfmSSLEnabled.text":@"wfmSSLEnabled",
-             @"wfmSSLPort":@"wfmSSLPort",
+             @"wfmSSLPort.text":@"wfmSSLPort",
              @"wfmURL.text":@"wfmURL",
              @"QMusicsEnabled.text":@"qMusicsEnabled",
              @"QMusicsURL.text":@"qMusicsURL",
@@ -93,6 +108,17 @@ static QNFileStationCoreDataMappingModule *staticFileStationCoreDataMappingModul
              @"HDAROOT_ALMOST_FULL.text":@"hdaRoot_ALMOST_FULL",
              @"serviceURL.text":@"serviceURL",
              };
+}
+
+#pragma mark - Private methods
+
+-(RKEntityMapping *)entityMapping:(NSString*)entityName withManagerObjectStore:(RKManagedObjectStore*)managedObjectStore{
+    RKEntityMapping *targetEntityMapping = [RKEntityMapping mappingForEntityForName:entityName inManagedObjectStore:managedObjectStore];
+    NSManagedObjectModel *managerObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    NSEntityDescription *targetEntityDescription = [[managerObjectModel entitiesByName] objectForKey:entityName];
+    NSArray *targetEntityKeys =[[[RKPropertyInspector sharedInspector] propertyInspectionForEntity:targetEntityDescription] allKeys];
+    [targetEntityMapping addAttributeMappingsFromDictionary:[self convertAllKeysFromRKPropertInspectorToDictionary:targetEntityKeys]];
+    return targetEntityMapping;
 }
 
 -(NSDictionary *)convertAllKeysFromRKPropertInspectorToDictionary:(NSArray*)allKeys{

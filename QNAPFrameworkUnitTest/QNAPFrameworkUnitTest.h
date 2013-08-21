@@ -7,7 +7,10 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "QNCommunicationManager.h"
+#import "QNFileStationAPIManager.h"
 
 @interface QNAPFrameworkUnitTest : SenTestCase
-
+@property(nonatomic, strong) QNCommunicationManager *communicationManager;
+@property(nonatomic, strong) QNFileStationAPIManager *fileStationManager;
 @end

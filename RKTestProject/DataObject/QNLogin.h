@@ -20,10 +20,8 @@
 @property (nonatomic, retain) NSNumber * dsv2Supported;
 @property (nonatomic, retain) NSString * dsv2URL;
 @property (nonatomic, retain) NSNumber * dsv3Supported;
-@property (nonatomic, retain) NSNumber * dWebEnabled;
 @property (nonatomic, retain) NSNumber * forceSSL;
 @property (nonatomic, retain) NSString * groupname;
-@property (nonatomic, retain) NSNumber * hdaroot_ALMOST_FULL;
 @property (nonatomic, retain) NSNumber * hdaRoot_ALMOST_FULL;
 @property (nonatomic, retain) NSString * hostname;
 @property (nonatomic, retain) NSString * httpHost;

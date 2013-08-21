@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MogeneratorTarget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>QNAPFrameworkUnitTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>RKTestProject.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,7 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0C639D7E17C21B870075A871</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0CAD9EA317BCB0B800E7B80B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A32F36F217C3D61500444575</key>
 		<dict>
 			<key>primary</key>
 			<true/>

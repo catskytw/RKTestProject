@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="11E53" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="CustomLogo" representedClassName="CustomLogo" syncable="YES">
         <attribute name="customFrontLogo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="customLoginLogo" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,14 +23,13 @@
         <attribute name="dsv2Supported" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="dsv2URL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dsv3Supported" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="dWebEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="forceSSL" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="hdaroot_ALMOST_FULL" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="hdaRoot_ALMOST_FULL" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="hostname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="httpHost" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_booting" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isAdmin" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="msv2Supported" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="msv2URL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="msv2WebEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -80,11 +79,11 @@
         <attribute name="nasName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="CustomLogo" positionX="-4646" positionY="-2307" width="128" height="73"/>
+        <element name="PasswdConstraints" positionX="-3726" positionY="-1656" width="128" height="103"/>
         <element name="QNFirmware" positionX="-12348" positionY="-2457" width="128" height="88"/>
-        <element name="QNLogin" positionX="-12195" positionY="-2790" width="128" height="793"/>
+        <element name="QNLogin" positionX="-12195" positionY="-2790" width="128" height="780"/>
         <element name="QNModel" positionX="-12512" positionY="-2259" width="128" height="135"/>
         <element name="QNMyCloudVLink" positionX="-3744" positionY="-1773" width="128" height="75"/>
-        <element name="PasswdConstraints" positionX="-3726" positionY="-1656" width="128" height="103"/>
-        <element name="CustomLogo" positionX="-4646" positionY="-2307" width="128" height="73"/>
     </elements>
 </model>
