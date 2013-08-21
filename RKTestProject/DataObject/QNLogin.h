@@ -2,7 +2,7 @@
 //  QNLogin.h
 //  RKTestProject
 //
-//  Created by Change.Liao on 13/8/20.
+//  Created by Chen-chih Liao on 13/8/21.
 //  Copyright (c) 2013年 Change.Liao. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * authPassed;
 @property (nonatomic, retain) NSString * authSid;
+@property (nonatomic, retain) NSString * demoSiteSupport;
 @property (nonatomic, retain) NSString * doQuick;
 @property (nonatomic, retain) NSNumber * dsv2Supported;
 @property (nonatomic, retain) NSString * dsv2URL;
@@ -23,6 +24,7 @@
 @property (nonatomic, retain) NSNumber * forceSSL;
 @property (nonatomic, retain) NSString * groupname;
 @property (nonatomic, retain) NSNumber * hdaroot_ALMOST_FULL;
+@property (nonatomic, retain) NSNumber * hdaRoot_ALMOST_FULL;
 @property (nonatomic, retain) NSString * hostname;
 @property (nonatomic, retain) NSString * httpHost;
 @property (nonatomic, retain) NSNumber * is_booting;
@@ -40,7 +42,9 @@
 @property (nonatomic, retain) NSString * qPhotosURL;
 @property (nonatomic, retain) NSNumber * qVideosEnabled;
 @property (nonatomic, retain) NSString * qVideosURL;
+@property (nonatomic, retain) NSNumber * qWebEnabled;
 @property (nonatomic, retain) NSNumber * qWebPort;
+@property (nonatomic, retain) NSNumber * qWebSSLEnabled;
 @property (nonatomic, retain) NSNumber * qWebSSLPort;
 @property (nonatomic, retain) NSString * serviceURL;
 @property (nonatomic, retain) NSString * specVersion;
@@ -52,16 +56,13 @@
 @property (nonatomic, retain) NSNumber * wfm2;
 @property (nonatomic, retain) NSNumber * wfmPort;
 @property (nonatomic, retain) NSNumber * wfmPortEnabled;
+@property (nonatomic, retain) NSNumber * wfmSSLEnabled;
 @property (nonatomic, retain) NSNumber * wfmSSLPort;
 @property (nonatomic, retain) NSString * wfmURL;
-@property (nonatomic, retain) NSString * demoSiteSupport;
-@property (nonatomic, retain) NSNumber * qWebEnabled;
-@property (nonatomic, retain) NSNumber * qWebSSLEnabled;
-@property (nonatomic, retain) NSNumber * wfmSSLEnabled;
-@property (nonatomic, retain) NSNumber * hdaRoot_ALMOST_FULL;
-@property (nonatomic, retain) QNFirmware *relationship_QNFirmware;
-@property (nonatomic, retain) QNModel *relationship_QNModel;
+@property (nonatomic, retain) NSNumber * isAdmin;
 @property (nonatomic, retain) PasswdConstraints *relationship_customLogo;
 @property (nonatomic, retain) PasswdConstraints *relationship_passwdConstraints;
+@property (nonatomic, retain) QNFirmware *relationship_QNFirmware;
+@property (nonatomic, retain) QNModel *relationship_QNModel;
 
 @end

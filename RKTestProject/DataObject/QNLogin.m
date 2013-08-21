@@ -2,7 +2,7 @@
 //  QNLogin.m
 //  RKTestProject
 //
-//  Created by Change.Liao on 13/8/20.
+//  Created by Chen-chih Liao on 13/8/21.
 //  Copyright (c) 2013年 Change.Liao. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 
 @dynamic authPassed;
 @dynamic authSid;
+@dynamic demoSiteSupport;
 @dynamic doQuick;
 @dynamic dsv2Supported;
 @dynamic dsv2URL;
@@ -24,6 +25,7 @@
 @dynamic forceSSL;
 @dynamic groupname;
 @dynamic hdaroot_ALMOST_FULL;
+@dynamic hdaRoot_ALMOST_FULL;
 @dynamic hostname;
 @dynamic httpHost;
 @dynamic is_booting;
@@ -41,7 +43,9 @@
 @dynamic qPhotosURL;
 @dynamic qVideosEnabled;
 @dynamic qVideosURL;
+@dynamic qWebEnabled;
 @dynamic qWebPort;
+@dynamic qWebSSLEnabled;
 @dynamic qWebSSLPort;
 @dynamic serviceURL;
 @dynamic specVersion;
@@ -53,16 +57,13 @@
 @dynamic wfm2;
 @dynamic wfmPort;
 @dynamic wfmPortEnabled;
+@dynamic wfmSSLEnabled;
 @dynamic wfmSSLPort;
 @dynamic wfmURL;
-@dynamic demoSiteSupport;
-@dynamic qWebEnabled;
-@dynamic qWebSSLEnabled;
-@dynamic wfmSSLEnabled;
-@dynamic hdaRoot_ALMOST_FULL;
-@dynamic relationship_QNFirmware;
-@dynamic relationship_QNModel;
+@dynamic isAdmin;
 @dynamic relationship_customLogo;
 @dynamic relationship_passwdConstraints;
+@dynamic relationship_QNFirmware;
+@dynamic relationship_QNModel;
 
 @end
